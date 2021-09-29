@@ -1,0 +1,101 @@
+body {
+/*  min-height: 2000px;*/
+  padding-top: 70px;
+background: url(../images/foto.jpg) no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;	
+}
+
+}
+header#cabecalho {
+border-bottom: 1px #606060 solid;
+height: 80px;
+background: url("../images/logo/logo_peiu.png") no-repeat 0px 0px;
+}
+
+.titulo{
+	text-align: center;
+	position: relative;
+	top: 20px;
+	color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;
+}
+.jumbotron{
+background: rgba(255,255,255,0.8);
+min-height: 550px;
+
+}
+
+	
+}
+/* formularios*/
+.container{
+
+}
+*[role="form"] {
+    max-width: 530px;
+    padding: ;
+    margin: 0 auto;
+    background-color: ;
+    border-radius: ;
+}
+
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+
+
+/*formulario de solicitação de serviço*/
+
+ul.col3 
+{ 
+	
+padding-right: 0px; 
+padding-left: 0px; 
+float: left; 
+padding-bottom: 0px; 
+margin: 5px 0px; 
+width: 100%; 
+padding-top: 0px; 
+list-style-type: none 
+} 
+
+ul.col3 li 
+{ 
+padding-right: 2px; 
+display: inline; 
+padding-left: 2px; 
+float: left; 
+padding-bottom: 2px; 
+width: 30%; 
+padding-top: 2px 
+
+} 
+
+
+ul.col2
+{ 
+padding-right: 0px; 
+padding-left: 0px; 
+float: left; 
+padding-bottom: 0px; 
+margin: 15px 0px; 
+width: 100%; 
+padding-top: 0px; 
+list-style-type: none 
+} 
+ul.col2 li 
+{ 
+padding-right: 30px; 
+display: inline; 
+padding-left: 2px; 
+float: left; 
+padding-bottom: 2px; 
+width: 30%; 
+padding-top: 5px 
+} 
