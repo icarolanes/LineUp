@@ -1,8 +1,15 @@
 <?php
 include_once('banco/seguranca.php');
+$rota = explode("-", $_GET['url'] ?? 'index');
+if (file_exists("main/{$rota[0]}.php")) {
+    $pagina = "main/{$rota[0]}.php";
+} elseif (file_exists("main/{$rota[0]}.html")) {
+    $pagina = "main/{$rota[0]}.html";
+} else {
+    $pagina = "main/inicio.html";
+}
 ?>
-<!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="utf-8">
@@ -12,7 +19,6 @@ include_once('banco/seguranca.php');
   <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-fixed/">
   <!-- Bootstrap core CSS -->
   <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-
   <!-- Favicons -->
   <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/apple-touch-icon.png"
     sizes="180x180">
@@ -28,7 +34,6 @@ include_once('banco/seguranca.php');
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link href="fontawesome-free/css/all.css" rel="stylesheet">
   <!--load all styles -->
-
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -48,7 +53,6 @@ include_once('banco/seguranca.php');
 </head>
 
 <body>
-
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Fixed navbar</a>
@@ -75,7 +79,6 @@ include_once('banco/seguranca.php');
               <li><a class="dropdown-item" href="#"><i class="fas fa-anchor"></i> Atracações</a></li>
             </ul>
           </li>
-
         </ul>
         <div class="dropdown">
           <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenuButton1"
@@ -89,93 +92,13 @@ include_once('banco/seguranca.php');
       </div>
     </div>
   </nav>
-
-  <main class="container">
-    <div class="bg-light p-5 rounded">
-      <h1>LineUp</h1>
-      <div class="table-responsive">
-        <table class="table table-sm" id="lista">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Navio</th>
-              <th scope="col">Status</th>
-              <th scope="col">Eta/Nor</th>
-              <th scope="col">ETB</th>
-              <th scope="col">ETS</th>
-              <th scope="col">W.TIME</th>
-              <th scope="col">CARGO</th>
-              <th scope="col">AGENCIA</th>
-              <th scope="col">QTD</th>
-            </tr>
-          </thead>
-          <tbody>
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </main>
+  <?php
+include_once($pagina);
+?>
   <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
   </script>
-  <script src="js/lineup.js"></script>
-  <script>
-  </script>
 </body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 </html>
-
-<!-- Modal -->
-<div class="modal fade" id="modal_form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="modal_formLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modal_formLabel">Cadastro de Atracação</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="navio" placeholder="Navio" autocomplete="off">
-            <label for="navio">Navio</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="number" inputmode="numeric" class="form-control" id="imo" placeholder="imo">
-            <label for="imo">Imo</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="date" class="form-control" id="eta" placeholder="eta">
-            <label for="eta">ETA/NOR</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="date" class="form-control" id="etb" placeholder="etb">
-            <label for="etb">ETB</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="date" class="form-control" id="ets" placeholder="ets">
-            <label for="ets">ETS</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control form-sm" id="cargo" placeholder="cargo">
-            <label for="cargo">Carga</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control form-sm" id="agency" placeholder="agency">
-            <label for="agency">Agência</label>
-          </div>
-          <div class="form-floating mb-3">
-            <input type="number" inputmode="decimal" class="form-control form-sm" id="qtd" placeholder="qtd">
-            <label for="qtd">Quantidade</label>
-          </div>
-
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
-      </div>
-    </div>
-  </div>
-</div>
