@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-d
+Options -Indexes 
+
+
+RewriteRule ^(.*)$ index.php?url=$1 [NC,L]
+
+
+<FilesMatch ".(php|htm|html|css|js)$">
+AddDefaultCharset UTF-8
+</FilesMatch>
+
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
