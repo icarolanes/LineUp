@@ -63,7 +63,7 @@ if (file_exists("main/{$rota[0]}.php")) {
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#"><i class="fas fa-home"></i> Inicio</a>
+            <a class="nav-link" aria-current="page" href="inicio"><i class="fas fa-home"></i> Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="lista_menu" role="button" data-bs-toggle="dropdown"
@@ -75,8 +75,8 @@ if (file_exists("main/{$rota[0]}.php")) {
                     class="fas fa-plus-circle"></i> Nova Atracação</a></li>
               <li><a class="dropdown-item" href="#"><i class="far fa-user"></i> Usuarios</a></li>
               <li><a class="dropdown-item" href="#"><i class="far fa-building"></i> Empresas</a></li>
-              <li><a class="dropdown-item" href="#"><i class="fas fa-ship"></i> Navios</a></li>
-              <li><a class="dropdown-item" href="#"><i class="fas fa-anchor"></i> Atracações</a></li>
+              <li><a class="dropdown-item" href="navios"><i class="fas fa-ship"></i> Navios</a></li>
+              <li><a class="dropdown-item" href="atracacoes"><i class="fas fa-anchor"></i> Atracações</a></li>
             </ul>
           </li>
         </ul>
