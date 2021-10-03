@@ -73,7 +73,7 @@ if (file_exists("main/{$rota[0]}.php")) {
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="lista_menu">
               <li data-bs-toggle="modal" data-bs-target="#modal_form"><a class="dropdown-item" href="#"><i
                     class="fas fa-plus-circle"></i> Nova Atracação</a></li>
-              <li><a class="dropdown-item" href="#"><i class="far fa-user"></i> Usuarios</a></li>
+              <li><a class="dropdown-item" href="usuarios"><i class="far fa-user"></i> Usuarios</a></li>
               <li><a class="dropdown-item" href="#"><i class="far fa-building"></i> Empresas</a></li>
               <li><a class="dropdown-item" href="navios"><i class="fas fa-ship"></i> Navios</a></li>
               <li><a class="dropdown-item" href="atracacoes"><i class="fas fa-anchor"></i> Atracações</a></li>
@@ -94,6 +94,7 @@ if (file_exists("main/{$rota[0]}.php")) {
   </nav>
   <?php
 include_once($pagina);
+include_once("main/modal_atracacao.html");
 ?>
   <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
