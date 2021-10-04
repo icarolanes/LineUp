@@ -7,18 +7,33 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="cad_atracacao" method="post">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="navio" placeholder="Navio" autocomplete="off">
+            <input type="text" class="form-control" list="lista_navios" id="navio" name="navio" placeholder="Navio"
+              autocomplete="off">
             <label for="navio">Navio</label>
+
+            <datalist id="lista_navios">
+              
+            </datalist>
+
           </div>
           <div class="form-floating mb-3">
-            <input type="number" inputmode="numeric" class="form-control" id="imo" placeholder="imo">
+            <input type="number" inputmode="numeric" class="form-control" id="imo" name="imo" value="" placeholder="imo">
             <label for="imo">Imo</label>
+          </div>
+          <div class="form-floating mb-3">
+            <select class="form-select" id="tipo" name="tipo" aria-label="Tipo de Navio">
+              <option selected></option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <label for="situacao">Tipo de Navio</label>
           </div>
 
           <div class="form-floating mb-3">
-            <select class="form-select" id="situacao" aria-label="seleção de situação">
+            <select class="form-select" id="situacao" name="situacao" aria-label="seleção de situação">
               <option selected></option>
               <option value="1">One</option>
               <option value="2">Two</option>
@@ -28,35 +43,36 @@
           </div>
 
           <div class="form-floating mb-3">
-            <input type="date" class="form-control" id="eta" placeholder="eta">
+            <input type="date" class="form-control" id="eta" name="eta" placeholder="eta">
             <label for="eta">ETA/NOR</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="date" class="form-control" id="etb" placeholder="etb">
+            <input type="date" class="form-control" id="etb" name="etb" placeholder="etb">
             <label for="etb">ETB</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="date" class="form-control" id="ets" placeholder="ets">
+            <input type="date" class="form-control" id="ets" name="ets" placeholder="ets">
             <label for="ets">ETS</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control form-sm" id="cargo" placeholder="cargo">
+            <input type="text" class="form-control form-sm" id="cargo" name="cargo" placeholder="cargo">
             <label for="cargo">Carga</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control form-sm" id="agency" placeholder="agency">
+            <input type="text" class="form-control form-sm" id="agency" name="agency" placeholder="agency">
             <label for="agency">Agência</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="number" inputmode="decimal" class="form-control form-sm" id="qtd" placeholder="qtd">
+            <input type="number" inputmode="decimal" class="form-control form-sm" id="qtd" name="qtd" placeholder="qtd">
             <label for="qtd">Quantidade</label>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
+        <button type="submit" form="cad_atracacao" class="btn btn-primary">Enviar</button>
       </div>
     </div>
   </div>
 </div>
+<script src="js/cadastro_atracacao.js"></script>
