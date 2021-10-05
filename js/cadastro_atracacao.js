@@ -14,13 +14,6 @@ $("#navio").on('input', function () {
         })
     }
 });
-$("#navio").on('change',function () {
-navio = this.value;
-$.getJSON("banco/dados_navio.php", { navio }, function (n) {
-    $("#imo").val(n[0].imo);
-    $("#imo").prop('disabled', true);
-})
-})
 
 
 $("#navio").on('focusout', function () {
