@@ -1,5 +1,6 @@
 <?php
 include_once('../../conexao_ln.php');
+include_once('banco/seguranca.php');
 function retorna($con, $tipo)
 {
     switch ($tipo) {
