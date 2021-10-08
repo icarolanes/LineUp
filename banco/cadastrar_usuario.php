@@ -1,6 +1,5 @@
 <?php
 include('../../conexao_ln.php');
-include_once('banco/seguranca.php');
 
 $valores['nome']     = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
 $valores['usuario']  = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);

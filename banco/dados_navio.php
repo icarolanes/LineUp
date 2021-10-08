@@ -1,6 +1,6 @@
 <?php
 include('../../conexao_ln.php');
-include_once('banco/seguranca.php');
+
 
      function busca_navio($busca, $con)
      {

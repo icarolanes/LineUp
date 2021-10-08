@@ -2,7 +2,7 @@
 //utilizar objeto para realizar login...
 session_start();
 include('../../conexao_ln.php');
-include_once('banco/seguranca.php');
+
 $usuario = $_POST['usuario'];
 $usuariofilter = filter_var($usuario, FILTER_SANITIZE_STRING);
 $senhat = base64_encode($_POST['senha']);
