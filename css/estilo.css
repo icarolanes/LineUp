@@ -8,7 +8,7 @@ background: url(../images/foto.jpg) no-repeat center top fixed;
     background-size: cover;	
 }
 
-}
+
 header#cabecalho {
 border-bottom: 1px #606060 solid;
 height: 80px;
@@ -31,17 +31,17 @@ min-height: 550px;
 }
 
 	
-}
+
 /* formularios*/
 .container{
 
 }
 *[role="form"] {
     max-width: 530px;
-    padding: ;
+    padding: 0%;
     margin: 0 auto;
-    background-color: ;
-    border-radius: ;
+    background-color: #606060;
+    border-radius: 0%;
 }
 
 *[role="form"] h2 {
